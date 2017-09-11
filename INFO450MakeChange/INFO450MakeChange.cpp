@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-	// int variables:
+	// int variables to be included:
 
     return 0;
 }
