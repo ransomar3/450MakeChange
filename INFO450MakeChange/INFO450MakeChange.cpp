@@ -9,6 +9,9 @@ using namespace std;
 int main()
 {
 	// int variables to be included:
+	int money;
+	int result;
+	int dollar, quarter, dime, nickel; 
 
     return 0;
 }
