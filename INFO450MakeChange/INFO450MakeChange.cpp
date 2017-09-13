@@ -10,17 +10,28 @@ int main()
 {
 	// int variables to be included:
 	int cost, item;
-	int paid;
-	int dollar, quarter, dime, nickel; 
+	int paid, remainder;
+	int dollar, quarter, dime, nickel;
 
-	cout << "Please enter the cost of the item:\n" << endl;
-	cout << "Please enter the amount you are paying:\n" << endl;
+	cout << "Please enter the cost of the item:\n " << endl;
+	cin >> cost;
+	cout << "You entered: " << cost << endl;
+	cout << "Please enter the amount you are paying:\n " << endl;
+	cin >> paid;
+	cout << "You entered: " << paid << endl;
 
-	if (paid >= item)
+	while (paid <= item)
 	{
-		cout << "Your change is:" << endl;
-	}
+		cout << "That's not enough money! You need " << remainder << " more." << endl;
+		cout << "Please enter in the additional amount:\n " << endl;
+	
+		if (paid >= item)
+		{
+			cout << "Thank you. Your change is:\n " << " " << endl;
+		}	
+		cin.ignore();
 
+	}
 
     return 0;
 }
