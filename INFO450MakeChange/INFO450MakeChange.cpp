@@ -9,6 +9,8 @@ using namespace std;
 int main()
 {
 	// double and int variables to be included:
+	// bool included at the end of program to ask user if they want to continue the loop or not.
+	// doubles declared for accuracy in change.
 	double cost, item, paid, paid2, remainder, more;
 	int dollar = 1 , quarter = 0.25, dime = 0.10, nickel = 0.05;
 	double x;
@@ -25,6 +27,7 @@ int main()
 
 	while (paid < item)
 	{
+		// while loop asking for more amounts if insufficient funds are provided for the cost of the item.
 		cout << "That's not enough money! You need " << more << " more." << endl;
 		cout << "Please enter in the additional amount:\n " << endl;
 		cin >> paid2;
