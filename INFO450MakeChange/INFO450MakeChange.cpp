@@ -8,10 +8,12 @@ using namespace std;
 
 int main()
 {
-	// int variables to be included:
-	int cost, item;
-	int paid, remainder;
-	int dollar, quarter, dime, nickel;
+	// double and int variables to be included:
+	double cost, item, paid, paid2, remainder, more;
+	int dollar = 1 , quarter = 0.25, dime = 0.10, nickel = 0.05;
+	int y;
+	double x;
+	bool resume = true;
 
 	cout << "Please enter the cost of the item:\n " << endl;
 	cin >> cost;
@@ -20,19 +22,29 @@ int main()
 	cin >> paid;
 	cout << "You entered: " << paid << endl;
 
-	while (paid <= item)
+	while (paid < item)
 	{
-		cout << "That's not enough money! You need " << remainder << " more." << endl;
+		cout << "That's not enough money! You need " << more << " more." << endl;
 		cout << "Please enter in the additional amount:\n " << endl;
+		cin >> paid2;
+		paid = paid + paid2;
+		
 	
-		if (paid >= item)
+		if (paid > item)
 		{
-			cout << "Thank you. Your change is:\n " << " " << endl;
+			cout << "Thank you. Your change is:\n " << remainder << endl;
+			cout << "# Dollars: " << dollar << endl;
+			cout << "# Quarters: " << quarter << endl;
+			cout << "# Dimes: " << dime << endl;
+			cout << "# Nickels: " << nickel << endl;
+
+
 		}	
-		cin.ignore();
+		
+		cout << "Would you like to enter another item? Press '1' to continue or '0' to stop. " << endl;
 
 	}
-
+	system("Pause");
     return 0;
 }
 
