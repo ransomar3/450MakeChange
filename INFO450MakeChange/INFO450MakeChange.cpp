@@ -11,10 +11,8 @@ int main()
 	// double and int variables to be included:
 	// bool included at the end of program to ask user if they want to continue the loop or not.
 	// doubles declared for accuracy in change.
-	double cost, item, paid, paid2, remainder, more;
-	int dollar = 1 , quarter = 0.25, dime = 0.10, nickel = 0.05;
-	double x;
-	int y;
+	double cost, paid, paid2, change = 1;
+	double dollar = 1.00 , quarter = 0.25, dime = 0.10, nickel = 0.05;
 	bool resume = true;
 	char answer;
 
@@ -25,36 +23,35 @@ int main()
 	cin >> paid;
 	cout << "You entered: " << paid << endl;
 
-	while (paid < item)
+	while (paid > cost)
+	{
+		// while loop giving you the amount of change you're receiving if the sufficient funds are provided. 
+		cout << "Thank you. Your change is:\n " << change << endl;
+		cout << "\n# Dollars: " << dollar << endl;
+		cout << "\n# Quarters: " << quarter << endl;
+		cout << "\n# Dimes: " << dime << endl;
+		cout << "\n# Nickels: " << nickel << endl;
+		dollar = change / 100;
+		quarter = change / 0.25;
+		dime = change / 0.10;
+		nickel = change / 0.05;
+
+	}
+
+	while (paid < cost)
 	{
 		// while loop asking for more amounts if insufficient funds are provided for the cost of the item.
-		cout << "That's not enough money! You need " << more << " more." << endl;
+		cout << "That's not enough money! You need " << cost-paid << " more." << endl;
 		cout << "Please enter in the additional amount:\n " << endl;
 		cin >> paid2;
-		more = cost - paid;
 		paid = paid + paid2;
 		
 	
-		if (paid > item)
-		{
-			cout << "Thank you. Your change is:\n " << remainder << endl;
-			cout << "# Dollars: " << dollar << endl;
-			cout << "# Quarters: " << quarter << endl;
-			cout << "# Dimes: " << dime << endl;
-			cout << "# Nickels: " << nickel << endl;
-
-			// cout << "Your change is: " << remainder << endl;
-			// cin >> x;
-			// y=???	for dollars
-			// y= x*100; cout: y/25		for quarters
-			// y= y%25;  cout: y/10		for dimes
-			// y= y%10;  cout: y/5		for nickels
-
-		}	
 		cout << "Would you like to enter another item? Press '1' to continue or '0' to exit. " << endl;
+		cin >> answer;
 		if (answer = '1')
 		{
-			continue;
+			continue;	
 		}
 		else if (answer = '0')
 		{
