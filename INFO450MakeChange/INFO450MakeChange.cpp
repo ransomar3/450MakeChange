@@ -38,7 +38,7 @@ int main()
 			cout << "Thank you. Your change is: " << "$ " << change << endl;
 			cents = change * 100;
 			cout << "# Dollars: " << cents << endl;
-			change = change/0.25;
+			cents = change/0.25;
 			cout << "# Quarters: " << cents << endl;
 			cents = change/0.10;
 			cout << "# Dimes: " << cents << endl;
